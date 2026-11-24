@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz – Suites numériques</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#27348b">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<main class="page">
+<header class="topbar"><a class="back" href="index.html">← Accueil</a><h1>Quiz sur les suites numériques</h1><span class="auteur">Réalisé par <b>VOGNITO Paterne</b></span></header>
+<div id="progress" class="progress" aria-label="Progression"></div>
+<p class="legend">Bleu : question en cours · <span class="g">vert : bonne réponse</span> · <span class="r">rouge : mauvaise réponse</span></p>
+<section id="game" class="box">
+  <h2 id="question" class="question">Chargement…</h2>
+  <div id="options" class="options"></div>
+  <div id="explain" class="explain" hidden></div>
+  <button id="next" class="btn" hidden>Question suivante</button>
+</section>
+<section id="recap" class="box recap" hidden>
+  <h2>Récapitulatif</h2>
+  <p class="big" id="pct"></p>
+  <ul>
+    <li>Bonnes réponses : <b id="ok"></b></li>
+    <li>Mauvaises réponses : <b id="ko"></b></li>
+    <li>Pourcentage de réussite : <b id="pct2"></b></li>
+  </ul>
+  <p id="msg" class="lead"></p>
+  <button class="btn" onclick="location.reload()">Rejouer avec de nouvelles questions</button>
+  <a class="btn ghost" href="index.html">← Retour à l'accueil</a>
+</section>
+</main>
+<script src="data.js"></script>
+<script src="quiz.js"></script>
+<script src="pwa.js"></script>
+</body>
+</html>

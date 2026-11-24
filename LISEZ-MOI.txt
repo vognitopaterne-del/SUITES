@@ -1,0 +1,10 @@
+Double-clique sur index.html pour ouvrir le site (aucune installation, fonctionne hors ligne).
+- data.js : la base des quiz (ajoute tes propres quiz en copiant une ligne)
+- cours.html / exercices.html : modifie directement le texte
+- aide.html : remplace les numéros et liens par les tiens (cherche 00000000000 et ton.compte)
+
+APPLICATION INSTALLABLE (PWA)
+- Le mode hors ligne et l'installation fonctionnent seulement quand le site est en ligne (https) ou sur localhost, pas en double-cliquant sur index.html.
+- Android/Chrome : bouton « Installer l'application » ou menu ⋮ > Ajouter à l'écran d'accueil. iPhone/Safari : Partager > Sur l'écran d'accueil.
+- Version actuelle : 1. Pour publier une mise à jour, change VERSION dans sw.js (ex. v1 devient v2) : les utilisateurs qui ont déjà l'application voient « Mettre à jour l'application » à la place de « Installer l'application ».
+- Hébergé sur Netlify (ou autre) : ouvre l'application une première fois avec internet pour que tout soit enregistré ; ensuite les modules s'ouvrent hors ligne. Après une mise à jour du site, rouvre l'application avec internet et appuie sur « Mettre à jour l'application ».

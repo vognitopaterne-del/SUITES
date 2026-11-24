@@ -1,0 +1,26 @@
+{
+  "name": "Apprendre les suites numériques",
+  "short_name": "Suites",
+  "description": "Cours, exercices corrigés et quiz sur les suites numériques",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "fr",
+  "background_color": "#f6f8ff",
+  "theme_color": "#27348b",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

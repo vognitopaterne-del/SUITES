@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cours – Suites numériques</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#27348b">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<main class="page">
+<header class="topbar"><a class="back" href="index.html">← Accueil</a><h1>Cours sur les suites numériques</h1><span class="auteur">Réalisé par <b>VOGNITO Paterne</b></span></header>
+<div class="coursgrid">
+<aside><section class="box sommaire"><h2>Sommaire</h2><ul><li><a href="#s1">Introduction</a></li><li><a href="#s2">Les différents types de suites</a></li><li><a href="#s3">Suites arithmétiques</a></li><li><a href="#s4">Suites géométriques</a></li><li><a href="#s5">Suites arithmético-géométriques</a></li><li><a href="#s6">Sens de variation d'une suite</a></li><li><a href="#s7">Suites majorées, minorées, bornées</a></li><li><a href="#s8">Raisonnement par récurrence</a></li><li><a href="#s9">Limite d'une suite</a></li><li><a href="#s10">Opérations sur les limites, formes indéterminées</a></li><li><a href="#s11">Théorèmes de comparaison et des gendarmes</a></li><li><a href="#s12">Suites monotones et convergence</a></li><li><a href="#s13">Suites adjacentes</a></li><li><a href="#s14">Autres suites</a></li><li><a href="#s15">Conclusion</a></li></ul></section></aside>
+<div>
+<section class="box cours" id="s1"><h2>Introduction</h2><p>Une <b>suite numérique</b> est une liste de nombres rangés dans un ordre précis : un premier terme, un deuxième, un troisième… On la note (u<sub>n</sub>) et le nombre <b>u<sub>n</sub></b> est le terme d'indice n.</p>
+<p>Elle sert à décrire tout ce qui évolue « pas à pas » : un salaire qui augmente chaque année, un capital placé à intérêts, une population, les mensualités d'un crédit…</p>
+<div class='ex'><b>Exemple.</b> u<sub>n</sub> = 2n + 1 donne u<sub>0</sub> = 1, u<sub>1</sub> = 3, u<sub>2</sub> = 5, u<sub>3</sub> = 7…</div></section>
+<section class="box cours" id="s2"><h2>Les différents types de suites</h2><p>Une suite peut être définie de deux façons :</p>
+<ul><li><b>Forme explicite :</b> u<sub>n</sub> = f(n). On calcule directement n'importe quel terme. Ex : u<sub>n</sub> = n<sup>2</sup> − 3.</li>
+<li><b>Forme récurrente :</b> on donne u<sub>0</sub> et une relation u<sub>n+1</sub> = f(u<sub>n</sub>). Il faut calculer les termes un à un. Ex : u<sub>0</sub> = 2 et u<sub>n+1</sub> = 3u<sub>n</sub> − 1.</li></ul>
+<p>Selon leur comportement on dit qu'une suite est <b>croissante</b> (u<sub>n+1</sub> ≥ u<sub>n</sub>), <b>décroissante</b> (u<sub>n+1</sub> ≤ u<sub>n</sub>), <b>constante</b>, <b>majorée</b>, <b>minorée</b> ou <b>bornée</b>.</p>
+<p>Trois grandes familles sont à connaître : arithmétiques, géométriques, arithmético-géométriques.</p></section>
+<section class="box cours" id="s3"><h2>Suites arithmétiques</h2><p>(u<sub>n</sub>) est <b>arithmétique</b> de raison r si on passe d'un terme au suivant en <b>ajoutant toujours r</b> : u<sub>n+1</sub> = u<sub>n</sub> + r.</p>
+<div class='f'>u<sub>n</sub> = u<sub>0</sub> + n·r &nbsp;&nbsp; ou &nbsp;&nbsp; u<sub>n</sub> = u<sub>p</sub> + (n − p)·r</div>
+<p><b>Somme</b> des premiers termes : S = (nombre de termes) × (premier terme + dernier terme) ÷ 2.</p>
+<p><b>Sens de variation :</b> croissante si r &gt; 0, décroissante si r &lt; 0, constante si r = 0.</p>
+<div class='ex'><b>Exemple.</b> u<sub>0</sub> = 5 et r = 3 : u<sub>10</sub> = 5 + 10×3 = 35.</div>
+<p><b>Astuce :</b> pour montrer qu'une suite est arithmétique, calcule u<sub>n+1</sub> − u<sub>n</sub> et vérifie que le résultat est une constante.</p></section>
+<section class="box cours" id="s4"><h2>Suites géométriques</h2><p>(u<sub>n</sub>) est <b>géométrique</b> de raison q si on passe d'un terme au suivant en <b>multipliant toujours par q</b> : u<sub>n+1</sub> = q × u<sub>n</sub>.</p>
+<div class='f'>u<sub>n</sub> = u<sub>0</sub> × q<sup>n</sup> &nbsp;&nbsp; ou &nbsp;&nbsp; u<sub>n</sub> = u<sub>p</sub> × q<sup>n−</sup>ᵖ</div>
+<p><b>Somme</b> (q ≠ 1) : S = premier terme × (1 − q<sup>nombre de termes</sup>) ÷ (1 − q).</p>
+<p><b>Sens de variation</b> (u<sub>0</sub> &gt; 0) : croissante si q &gt; 1, décroissante si 0 &lt; q &lt; 1.</p>
+<div class='ex'><b>Exemple.</b> u<sub>0</sub> = 2 et q = 3 : u<sub>4</sub> = 2 × 3<sup>4</sup> = 162.</div>
+<p><b>Astuce :</b> pour montrer qu'une suite est géométrique, calcule u<sub>n+1</sub> ÷ u<sub>n</sub> et vérifie que c'est une constante.</p></section>
+<section class="box cours" id="s5"><h2>Suites arithmético-géométriques</h2><p>Elles vérifient <b>u<sub>n+1</sub> = a·u<sub>n</sub> + b</b> (a ≠ 1, b ≠ 0) : un mélange des deux familles précédentes.</p>
+<p><b>Méthode :</b></p>
+<ol><li>Cherche le point fixe α tel que α = a·α + b, soit α = b ÷ (1 − a).</li>
+<li>Pose v<sub>n</sub> = u<sub>n</sub> − α : (v<sub>n</sub>) est <b>géométrique</b> de raison a.</li>
+<li>Donc v<sub>n</sub> = v<sub>0</sub> × a<sup>n</sup>, puis <b>u<sub>n</sub> = α + (u<sub>0</sub> − α)·a<sup>n</sup></b>.</li></ol>
+<div class='ex'><b>Exemple.</b> u<sub>0</sub> = 1, u<sub>n+1</sub> = 2u<sub>n</sub> + 3 → α = −3, v<sub>n</sub> = 4 × 2<sup>n</sup>, u<sub>n</sub> = 4×2<sup>n</sup> − 3.</div></section>
+<section class="box cours" id="s6"><h2>Sens de variation d'une suite</h2><p>Étudier les variations d'une suite, c'est savoir si ses termes <b>augmentent</b> ou <b>diminuent</b> quand n grandit.</p>
+<ul><li><b>Croissante</b> : u<sub>n+1</sub> ≥ u<sub>n</sub> pour tout n (strictement croissante si &gt;).</li>
+<li><b>Décroissante</b> : u<sub>n+1</sub> ≤ u<sub>n</sub> pour tout n (strictement décroissante si &lt;).</li>
+<li><b>Constante</b> : u<sub>n+1</sub> = u<sub>n</sub>. &nbsp;<b>Monotone</b> : croissante ou décroissante.</li></ul>
+<p><b>Les 4 méthodes :</b></p>
+<ol><li>Étudier le <b>signe de u<sub>n+1</sub> − u<sub>n</sub></b> (positif : croissante ; négatif : décroissante).</li>
+<li>Si tous les u<sub>n</sub> sont &gt; 0 : comparer <b>u<sub>n+1</sub> ÷ u<sub>n</sub> à 1</b>.</li>
+<li>Si u<sub>n</sub> = f(n) avec f monotone sur [0 ; +∞[, la suite a le même sens de variation que f.</li>
+<li>Utiliser un raisonnement par récurrence (voir plus loin).</li></ol>
+<div class='ex'><b>Exemple 1.</b> u<sub>n</sub> = n<sup>2</sup> + n : u<sub>n+1</sub> − u<sub>n</sub> = 2n + 2 &gt; 0, donc (u<sub>n</sub>) est strictement croissante.</div>
+<div class='ex'><b>Exemple 2.</b> u<sub>n</sub> = 3 ÷ 2<sup>n</sup> &gt; 0 : u<sub>n+1</sub> ÷ u<sub>n</sub> = 1/2 &lt; 1, donc (u<sub>n</sub>) est strictement décroissante.</div>
+<p><b>Attention :</b> pour u<sub>n+1</sub> = f(u<sub>n</sub>), si f est croissante la suite est monotone : croissante si u<sub>1</sub> ≥ u<sub>0</sub>, décroissante si u<sub>1</sub> ≤ u<sub>0</sub>.</p></section>
+<section class="box cours" id="s7"><h2>Suites majorées, minorées, bornées</h2><ul><li><b>Majorée</b> : il existe un réel M tel que u<sub>n</sub> ≤ M pour tout n.</li>
+<li><b>Minorée</b> : il existe un réel m tel que u<sub>n</sub> ≥ m pour tout n.</li>
+<li><b>Bornée</b> : à la fois majorée et minorée (m ≤ u<sub>n</sub> ≤ M).</li></ul>
+<div class='ex'><b>Exemples.</b> u<sub>n</sub> = 1/(n+1) est bornée : 0 &lt; u<sub>n</sub> ≤ 1. u<sub>n</sub> = n<sup>2</sup> est minorée par 0 mais pas majorée. u<sub>n</sub> = (−1)<sup>n</sup> est bornée : −1 ≤ u<sub>n</sub> ≤ 1.</div>
+<p><b>À retenir :</b> une suite croissante est minorée par u<sub>0</sub> ; une suite décroissante est majorée par u<sub>0</sub>.</p></section>
+<section class="box cours" id="s8"><h2>Raisonnement par récurrence</h2><p>Pour démontrer qu'une propriété P(n) est vraie pour tout n ≥ n<sub>0</sub> :</p>
+<ol><li><b>Initialisation :</b> on vérifie P(n<sub>0</sub>).</li><li><b>Hérédité :</b> on suppose P(n) vraie pour un n fixé et on démontre P(n+1).</li><li><b>Conclusion :</b> P(n) est vraie pour tout n ≥ n<sub>0</sub>.</li></ol>
+<div class='ex'><b>Exemple.</b> u<sub>0</sub> = 1 et u<sub>n+1</sub> = √(2u<sub>n</sub> + 3). Montrons que 0 ≤ u<sub>n</sub> ≤ 3.<br>Initialisation : u<sub>0</sub> = 1 est dans [0 ; 3].<br>Hérédité : si 0 ≤ u<sub>n</sub> ≤ 3, alors 3 ≤ 2u<sub>n</sub> + 3 ≤ 9, donc √3 ≤ u<sub>n+1</sub> ≤ 3 : u<sub>n+1</sub> est dans [0 ; 3].<br>Conclusion : 0 ≤ u<sub>n</sub> ≤ 3 pour tout n.</div></section>
+<section class="box cours" id="s9"><h2>Limite d'une suite</h2><p>On étudie le comportement de u<sub>n</sub> quand n devient <b>très grand</b> (n → +∞).</p>
+<ul><li>(u<sub>n</sub>) <b>converge</b> vers le réel ℓ si u<sub>n</sub> se rapproche autant qu'on veut de ℓ : lim u<sub>n</sub> = ℓ. Précisément : pour tout ε &gt; 0, |u<sub>n</sub> − ℓ| &lt; ε à partir d'un certain rang.</li>
+<li>lim u<sub>n</sub> = +∞ si u<sub>n</sub> dépasse tout réel A à partir d'un certain rang (de même pour −∞).</li>
+<li>Une suite qui ne converge pas est <b>divergente</b> : elle tend vers ±∞ ou n'a pas de limite, comme (−1)<sup>n</sup>.</li></ul>
+<p><b>Limites de référence :</b></p>
+<ul><li>1/n, 1/n<sup>2</sup>, 1/√n → 0 ; &nbsp;n, n<sup>2</sup>, √n → +∞.</li>
+<li>q<sup>n</sup> : → +∞ si q &gt; 1 ; → 1 si q = 1 ; → 0 si −1 &lt; q &lt; 1 ; pas de limite si q ≤ −1.</li>
+<li>Suite arithmétique de raison r : → +∞ si r &gt; 0 ; → −∞ si r &lt; 0 ; constante si r = 0.</li>
+<li>Suite arithmético-géométrique u<sub>n</sub> = α + (u<sub>0</sub> − α)a<sup>n</sup> : converge vers α si −1 &lt; a &lt; 1.</li></ul>
+<p><b>Propriétés :</b> la limite, si elle existe, est <b>unique</b>. Toute suite convergente est <b>bornée</b> (la réciproque est fausse : (−1)<sup>n</sup> est bornée mais diverge).</p></section>
+<section class="box cours" id="s10"><h2>Opérations sur les limites, formes indéterminées</h2><p>Si lim u<sub>n</sub> = ℓ et lim v<sub>n</sub> = ℓ' (réels), alors lim (u<sub>n</sub> + v<sub>n</sub>) = ℓ + ℓ', lim (u<sub>n</sub> × v<sub>n</sub>) = ℓ × ℓ' et lim (u<sub>n</sub> ÷ v<sub>n</sub>) = ℓ ÷ ℓ' si ℓ' ≠ 0. Ces règles s'étendent aux limites infinies, sauf dans quatre cas :</p>
+<div class='f'>+∞ − ∞ &nbsp;&nbsp; 0 × ∞ &nbsp;&nbsp; ∞ ÷ ∞ &nbsp;&nbsp; 0 ÷ 0</div>
+<p>Ce sont des <b>formes indéterminées</b> : il faut transformer l'expression.</p>
+<ul><li><b>Fraction de polynômes :</b> on factorise le terme de plus haut degré en haut et en bas.</li>
+<li><b>Différence de racines :</b> on multiplie par la quantité conjuguée.</li></ul>
+<div class='ex'><b>Exemple 1.</b> u<sub>n</sub> = (3n<sup>2</sup> + 1) ÷ (n<sup>2</sup> + 5) = (3 + 1/n<sup>2</sup>) ÷ (1 + 5/n<sup>2</sup>) → 3.</div>
+<div class='ex'><b>Exemple 2.</b> u<sub>n</sub> = √(n+1) − √n = 1 ÷ (√(n+1) + √n) → 0.</div></section>
+<section class="box cours" id="s11"><h2>Théorèmes de comparaison et des gendarmes</h2><ul><li><b>Comparaison :</b> si u<sub>n</sub> ≥ v<sub>n</sub> à partir d'un certain rang et lim v<sub>n</sub> = +∞, alors lim u<sub>n</sub> = +∞. Si u<sub>n</sub> ≤ v<sub>n</sub> et lim v<sub>n</sub> = −∞, alors lim u<sub>n</sub> = −∞.</li>
+<li><b>Gendarmes :</b> si v<sub>n</sub> ≤ u<sub>n</sub> ≤ w<sub>n</sub> et lim v<sub>n</sub> = lim w<sub>n</sub> = ℓ, alors lim u<sub>n</sub> = ℓ.</li>
+<li>Si |u<sub>n</sub> − ℓ| ≤ v<sub>n</sub> et lim v<sub>n</sub> = 0, alors lim u<sub>n</sub> = ℓ.</li>
+<li><b>Passage à la limite :</b> si u<sub>n</sub> ≤ v<sub>n</sub> et que les deux suites convergent, alors lim u<sub>n</sub> ≤ lim v<sub>n</sub> (l'inégalité devient large).</li></ul>
+<div class='ex'><b>Exemple 1.</b> u<sub>n</sub> = (−1)<sup>n</sup> ÷ n (n ≥ 1) : −1/n ≤ u<sub>n</sub> ≤ 1/n, donc lim u<sub>n</sub> = 0 (gendarmes).</div>
+<div class='ex'><b>Exemple 2.</b> u<sub>n</sub> = n + (−1)<sup>n</sup> ≥ n − 1 et n − 1 → +∞, donc lim u<sub>n</sub> = +∞.</div></section>
+<section class="box cours" id="s12"><h2>Suites monotones et convergence</h2><div class='f'>Croissante et majorée ⇒ convergente &nbsp;|&nbsp; Décroissante et minorée ⇒ convergente</div>
+<ul><li>Une suite croissante et <b>non majorée</b> tend vers +∞ ; une suite décroissante et non minorée tend vers −∞.</li>
+<li>Ce théorème donne l'<b>existence</b> de la limite, pas sa valeur.</li>
+<li>Pour u<sub>n+1</sub> = f(u<sub>n</sub>) avec f continue : si (u<sub>n</sub>) converge vers ℓ, alors <b>ℓ = f(ℓ)</b>.</li></ul>
+<div class='ex'><b>Exemple.</b> u<sub>0</sub> = 1 et u<sub>n+1</sub> = √(2u<sub>n</sub> + 3). On a montré par récurrence que u<sub>n</sub> ≤ 3. La suite est croissante (u<sub>1</sub> = √5 ≥ u<sub>0</sub> et f est croissante) et majorée : elle converge vers ℓ avec ℓ = √(2ℓ + 3), soit ℓ<sup>2</sup> − 2ℓ − 3 = 0, donc ℓ = 3 (car ℓ ≥ 0).</div></section>
+<section class="box cours" id="s13"><h2>Suites adjacentes</h2><p>(u<sub>n</sub>) et (v<sub>n</sub>) sont <b>adjacentes</b> si (u<sub>n</sub>) est croissante, (v<sub>n</sub>) est décroissante et lim (v<sub>n</sub> − u<sub>n</sub>) = 0.</p>
+<p><b>Théorème :</b> deux suites adjacentes convergent vers la <b>même limite</b> ℓ, et u<sub>n</sub> ≤ ℓ ≤ v<sub>n</sub> pour tout n : on obtient un encadrement de ℓ aussi précis qu'on veut.</p>
+<div class='ex'><b>Exemple.</b> u<sub>n</sub> = 1 − 1/n (croissante) et v<sub>n</sub> = 1 + 1/n (décroissante) pour n ≥ 1, avec v<sub>n</sub> − u<sub>n</sub> = 2/n → 0. Elles sont adjacentes, de limite 1.</div></section>
+<section class="box cours" id="s14"><h2>Autres suites</h2><ul><li><b>Suite de Fibonacci :</b> F<sub>0</sub> = 0, F<sub>1</sub> = 1, F<sub>n+2</sub> = F<sub>n+1</sub> + F<sub>n</sub> → 0, 1, 1, 2, 3, 5, 8, 13… Le rapport F<sub>n+1</sub> ÷ F<sub>n</sub> tend vers le nombre d'or (1 + √5) ÷ 2 ≈ 1,618.</li>
+<li><b>Suites homographiques :</b> u<sub>n+1</sub> = (a·u<sub>n</sub> + b) ÷ (c·u<sub>n</sub> + d).</li>
+<li><b>Suites définies par une somme :</b> S<sub>n</sub> = 1 + 2 + … + n = n(n+1) ÷ 2.</li>
+<li><b>Suites extraites :</b> (u<sub>2n</sub>) et (u<sub>2n+1</sub>). Si elles ont la même limite ℓ, alors (u<sub>n</sub>) converge vers ℓ ; sinon (u<sub>n</sub>) diverge.</li></ul></section>
+<section class="box cours" id="s15"><h2>Conclusion</h2><p>À retenir : <b>arithmétique</b> = on ajoute toujours la même chose ; <b>géométrique</b> = on multiplie toujours par le même nombre ; <b>arithmético-géométrique</b> = on se ramène à une suite géométrique grâce au point fixe.</p>
+<p>Pour étudier une suite : (1) calcule u<sub>n+1</sub> − u<sub>n</sub> pour le <b>sens de variation</b> ; (2) cherche un <b>encadrement</b> pour savoir si elle est bornée ; (3) détermine sa <b>limite</b> avec les limites usuelles, les gendarmes ou le théorème des suites monotones.</p>
+<p>Passe maintenant aux exercices corrigés, puis teste-toi avec le quiz.</p></section>
+</div>
+</div>
+<a class="btn" href="index.html">← Retour à l'accueil</a>
+</main>
+<script src="pwa.js"></script>
+</body>
+</html>
